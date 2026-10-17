@@ -1,0 +1,69 @@
+:root {
+  --gruen: #2f6b36;
+  --logo: #46904d;
+  --gruen-hell: #e8f0e6;
+  --text: #1f2a22;
+  --grau: #5b665e;
+  --hinter: #ffffff;
+  --rand: #d5ded3;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--text);
+  background: var(--hinter);
+  line-height: 1.6;
+}
+.wrap { max-width: 1000px; margin: 0 auto; padding: 0 16px; }
+a { color: var(--gruen); }
+
+.kopf { background: var(--hinter); border-bottom: 1px solid var(--rand); position: sticky; top: 0; z-index: 10; }
+.kopf-innen { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-top: 10px; padding-bottom: 10px; }
+.marke { display: flex; align-items: center; }
+.logo { height: 44px; width: auto; max-width: 100%; }
+.nav { display: flex; gap: 4px 16px; flex-wrap: wrap; }
+.nav a { text-decoration: none; color: var(--text); font-size: 0.95rem; }
+.nav a:hover { color: var(--gruen); }
+
+.hero { background: linear-gradient(90deg, rgba(25,55,30,.88) 0%, rgba(25,55,30,.6) 55%, rgba(25,55,30,.15) 100%), url(bilder/rigi.jpg) center 40% / cover; color: #fff; padding: 96px 0; }
+.hero h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.2; margin: 0 0 16px; max-width: 22ch; }
+.lead { font-size: 1.15rem; max-width: 60ch; margin: 0 0 24px; }
+.dach { text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.85rem; opacity: 0.85; margin: 0 0 8px; }
+.knopf { display: inline-block; background: #fff; color: var(--gruen); padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; }
+
+.zahlen-band { background: var(--gruen); color: #fff; }
+.zahlen { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; padding-top: 20px; padding-bottom: 20px; text-align: center; }
+.zahlen strong { display: block; font-size: 1.8rem; line-height: 1.2; }
+.zahlen span { font-size: 0.95rem; opacity: 0.9; }
+@media (max-width: 560px) { .zahlen { grid-template-columns: repeat(2, 1fr); } }
+.galerie { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin: 24px 0; }
+.galerie figure { margin: 0; }
+.galerie img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 8px; display: block; }
+.galerie figcaption { font-size: 0.9rem; color: var(--grau); margin-top: 6px; }
+.ablauf li { margin-bottom: 4px; }
+.abschnitt { padding: 56px 16px; }
+.band { background: var(--gruen-hell); }
+h2 { font-size: 1.8rem; margin: 0 0 16px; color: var(--gruen); }
+h3 { margin: 0 0 8px; }
+.karten { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin: 16px 0; }
+.karten.vier { grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
+.karte { background: #fff; border: 1px solid var(--rand); border-radius: 8px; padding: 20px; }
+.liste { margin: 0 0 16px; padding-left: 18px; }
+.karte .liste { margin-top: 12px; }
+.zwei { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 8px 40px; }
+.zwei h3 { margin-top: 16px; }
+blockquote { margin: 0; padding: 16px 20px; border-left: 4px solid var(--logo); background: var(--gruen-hell); border-radius: 0 6px 6px 0; }
+cite { display: block; margin-top: 8px; font-size: 0.9rem; color: var(--grau); font-style: normal; }
+.hinweis { color: var(--grau); font-size: 0.9rem; }
+.link-dok { font-weight: 600; }
+address { font-style: normal; }
+
+/* Platzhalter: entfernen, sobald die echten Angaben drin sind */
+.platzhalter { background: #fff3c4; padding: 0 4px; border-radius: 3px; }
+.platzhalter-block { background: #fff3c4; padding: 12px; border-radius: 6px; }
+
+.fuss { background: var(--text); color: #cfd8d0; padding: 24px 0; font-size: 0.9rem; }
+.fuss p { margin: 0; }
+.mail { overflow-wrap: anywhere; }
